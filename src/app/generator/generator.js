@@ -4,8 +4,12 @@ angular.module('generator', [])
 	$scope.entries = [];
 	$scope.currentIndex = 0;
 
-	$scope.addEntry = function(input) {
-		$scope.entries[$scope.currentIndex] = input;
+	$scope.nextSquare = function() {
+		$scope.bingoInput = "";
 		$scope.currentIndex++;
 	}
+
+	$scope.$watch('bingoInput', function(newVal) {
+		$scope.entries[$scope.currentIndex] = newVal;
+	})
 });
