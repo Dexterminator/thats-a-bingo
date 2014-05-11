@@ -1,1 +1,3 @@
-angular.module('app', ['generator']);
+angular.module('app', [
+	'generator',
+	'directives.square']);

@@ -1,5 +1,5 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	$scope.greet = "Hello";
+	$scope.entries = ["Hej", "va", "wat"];
 });
