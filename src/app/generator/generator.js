@@ -5,8 +5,13 @@ angular.module('generator', [])
 	$scope.currentIndex = 0;
 
 	$scope.nextSquare = function() {
-		$scope.bingoInput = "";
 		$scope.currentIndex++;
+		$scope.bingoInput = $scope.entries[$scope.currentIndex];
+	}
+
+	$scope.selectSquare = function(index) {
+		$scope.bingoInput = $scope.entries[index];
+		$scope.currentIndex = index;
 	}
 
 	$scope.$watch('bingoInput', function(newVal) {
