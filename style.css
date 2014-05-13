@@ -7,3 +7,14 @@
     text-align: center;
     display: table-cell;
 }
+
+.selected-square{
+	height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    background-color: lightblue;
+}

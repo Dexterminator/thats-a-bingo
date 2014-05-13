@@ -11,27 +11,27 @@
 		<table>
 			<tr>
 				<td ng-repeat="i in [0, 1, 2, 3, 4]">
-					<div class="square" ng-click="selectSquare(i)">{{entries[i]}}</div>
+					<div class="square" ng-class="{'selected-square': (i === currentIndex)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
 				<td>
 			</tr>
 			<tr>
 				<td ng-repeat="i in [5, 6, 7, 8, 9]">
-					<div class="square" ng-click="selectSquare(i)">{{entries[i]}}</div>
+					<div class="square" ng-class="{'selected-square': (i === currentIndex)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
 				<td>
 			</tr>
 			<tr>
 				<td ng-repeat="i in [10, 11, 12, 13, 14]">
-					<div class="square" ng-click="selectSquare(i)">{{entries[i]}}</div>
+					<div class="square" ng-class="{'selected-square': (i === currentIndex)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
 				<td>
 			</tr>
 			<tr>
 				<td ng-repeat="i in [15, 16, 17, 18, 19]">
-					<div class="square" ng-click="selectSquare(i)">{{entries[i]}}</div>
+					<div class="square" ng-class="{'selected-square': (i === currentIndex)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
 				<td>
 			</tr>
 			<tr>
 				<td ng-repeat="i in [20, 21, 22, 23, 24]">
-					<div class="square" ng-click="selectSquare(i)">{{entries[i]}}</div>
+					<div class="square" ng-class="{'selected-square': (i === currentIndex)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
 				<td>
 			</tr>
 
@@ -39,8 +39,8 @@
 
 		<br>
 		<div class="row">
-			<div class="col-md-4"><input type="text" ng-model="bingoInput" class="form-control"></div>
-			<button class="btn btn-primary" ng-click="nextSquare()">Next</button>
+			<div class="col-md-4"><input type="text" ng-model="bingoInput" class="form-control" focus-this="focusInput"></div>
+			<button class="btn btn-primary" ng-click="nextSquare(); focusInput=true;">Next</button>
 		</div>
 	</div>
 </div>
