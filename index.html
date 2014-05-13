@@ -40,7 +40,7 @@
 		<div class="row">
 			<form class="form-horizontal" role="form" ng-submit="nextSquare(); focusInput=true">
 				<div class="col-md-5"><input type="text" ng-model="entries[currentIndex]" class="form-control" focus-this="focusInput"></div>
-				<button type="button" class="btn btn-primary" ng-click="shuffle()" ng-disabled="entries.length < 25">Shuffle</button>
+				<button type="button" class="btn btn-primary" ng-click="shuffle()" ng-disabled="!isBoardFilled">Shuffle</button>
 				<button type="submit" class="btn btn-primary">Next</button>
 			</form>
 		</div>

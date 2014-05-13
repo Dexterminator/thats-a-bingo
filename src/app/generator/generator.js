@@ -1,9 +1,10 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	$scope.entries = [];
+	$scope.entries = ["1", "2", "3", "4", "5", "6", "7"];
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
+	$scope.isBoardFilled = false;
 
 	$scope.nextSquare = function() {
 		$scope.currentIndex++;
@@ -13,6 +14,24 @@ angular.module('generator', [])
 		$scope.currentIndex = index;
 		$scope.focusInput = true;
 	}
+
+	$scope.$watch('entries', function(newVal) {
+		console.log("entries changed");
+		if ($scope.entries.length < 25) {
+			$scope.isBoardFilled = false;
+			return;
+		} else {
+			angular.forEach($scope.entries, function(entry, index) {
+				console.log("entry: " + entry + ", index: " + index);
+				if (entry.length === 0) {
+					console.log("length is 0");
+					$scope.isBoardFilled = false;
+					return;
+				};
+			})
+		}
+		$scope.isBoardFilled = true;
+	}, true);
 
 	$scope.shuffle = function() {
 		var counter = $scope.entries.length, temp, index;
