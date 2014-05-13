@@ -7,18 +7,12 @@ angular.module('generator', [])
 
 	$scope.nextSquare = function() {
 		$scope.currentIndex++;
-		$scope.bingoInput = $scope.entries[$scope.currentIndex];
 	}
 
 	$scope.selectSquare = function(index) {
-		$scope.bingoInput = $scope.entries[index];
 		$scope.currentIndex = index;
 		$scope.focusInput = true;
 	}
-
-	$scope.$watch('bingoInput', function(newVal) {
-		$scope.entries[$scope.currentIndex] = newVal;
-	})
 })
 
 .directive('focusThis', function() {
