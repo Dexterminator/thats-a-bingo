@@ -35,6 +35,7 @@ angular.module('generator', [])
 
 .directive('focusThis', function() {
 	return {
+		restrict: "A",
 		link: function(scope, element, attrs) {
 			scope.$watch(attrs.focusThis, function(value) {
 				if (value === true) {
