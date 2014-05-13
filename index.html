@@ -39,8 +39,10 @@
 
 		<br>
 		<div class="row">
-			<div class="col-md-4"><input type="text" ng-model="bingoInput" class="form-control" focus-this="focusInput"></div>
-			<button class="btn btn-primary" ng-click="nextSquare(); focusInput=true;">Next</button>
+			<form class="form-horizontal" role="form" ng-submit="nextSquare(); focusInput=true">
+				<div class="col-md-5"><input type="text" ng-model="bingoInput" class="form-control" focus-this="focusInput"></div>
+				<button type="submit" class="btn btn-primary" >Next</button>
+			</form>
 		</div>
 	</div>
 </div>
