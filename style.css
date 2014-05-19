@@ -8,6 +8,11 @@ h1 {
     color: #000;
     }
 
+.containter {
+    margin-left: auto ;
+    margin-right: auto ;
+    }
+
 .square{
 	height: 120px;
     width: 120px;
@@ -47,3 +52,4 @@ h1 {
     color: #eceabe;
     text-transform: uppercase;
     }
+
