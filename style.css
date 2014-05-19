@@ -17,19 +17,19 @@ table {
 	height: 120px;
     width: 120px;
     border-radius: 0px;
-    border: 1px solid black;
+    border: 1px solid #ECF0F1;
     vertical-align: middle;
     text-align: center;
     display: table-cell;
     word-break: break-word;
-    background-color: #2C3E50;
+    background-color: #18a9a7;
 }
 
 .selected-square{
 	height: 120px;
     width: 120px;
     border-radius: 0px;
-    border: 1px solid black;
+    border: 1px solid #ECF0F1;
     vertical-align: middle;
     text-align: center;
     display: table-cell;
@@ -51,9 +51,4 @@ table {
 .bingo-header h1 {
     color: #eceabe;
     text-transform: uppercase;
-    }
-
-.bingo-row {
-    margin-left: auto ;
-    margin-right: auto ;
     }
