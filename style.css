@@ -37,7 +37,13 @@ h1 {
     font-size: 24px;
     text-align: center;
     background-color: #1fcecb;
-    color: #eceabe;
     padding: 30px 15px;
     position: relative;
     margin-bottom: 40px;
+
+}
+
+.bingo-header h1 {
+    color: #eceabe;
+    text-transform: uppercase;
+    }
