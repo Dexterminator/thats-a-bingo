@@ -52,3 +52,8 @@ table {
     color: #eceabe;
     text-transform: uppercase;
     }
+
+.bingo-row { 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; }
