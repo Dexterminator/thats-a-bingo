@@ -1,21 +1,28 @@
+body {
+    background-color: #ECF0F1;
+    color: #E9E9E9;
+    font-size: 16px;
+    }
+
 .square{
 	height: 120px;
     width: 120px;
-    border-radius: 10px;
+    border-radius: 0px;
     border: 1px solid black;
     vertical-align: middle;
     text-align: center;
     display: table-cell;
-    word-break: break-all;
+    word-break: break-word;
+    backgroud: #B0AAC9;
 }
 
 .selected-square{
 	height: 120px;
     width: 120px;
-    border-radius: 10px;
+    border-radius: 0px;
     border: 1px solid black;
     vertical-align: middle;
     text-align: center;
     display: table-cell;
-    background-color: lightblue;
+    background-color: #E74C3C;
 }
