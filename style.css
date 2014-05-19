@@ -30,3 +30,12 @@ h1 {
     display: table-cell;
     background-color: #E74C3C;
 }
+
+.bingo-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align: left;
+    background-color: #6f5499;
+    padding: 30px 15px;
+    position: relative;
