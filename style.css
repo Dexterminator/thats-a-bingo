@@ -35,7 +35,9 @@ h1 {
     padding-top: 60px;
     padding-bottom: 60px;
     font-size: 24px;
-    text-align: left;
-    background-color: #6f5499;
+    text-align: center;
+    background-color: #1fcecb;
+    color: #eceabe;
     padding: 30px 15px;
     position: relative;
+    margin-bottom: 40px;
