@@ -41,20 +41,31 @@ table {
 }
 
 .bingo-header {
-    padding-top: 60px;
-    padding-bottom: 60px;
     font-size: 24px;
     text-align: center;
     background-color: #1fcecb;
-    padding: 30px 15px;
+    padding-top:20px; 
+    padding-bottom:40px;
+    padding-left:15px;
+    padding-right:15px;
     position: relative;
     margin-bottom: 40px;
+    line-height: 0.6;
 
 }
 
-.bingo-header h1 {
+.bingo-header h1{
     color: #eceabe;
     text-transform: uppercase;
+    font-size: 4.5em;
+    line-height: 0.6;
+    }
+
+    .bingo-header h2{
+    color: #E9E9E9;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 0.6;
     }
 
 .bingo-row { 
