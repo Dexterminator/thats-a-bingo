@@ -56,3 +56,7 @@ table {
 .bingo-row { 
     margin-left: auto;
     margin-right: auto; }
+
+.small-text {
+    font-size: 12px;
+}
