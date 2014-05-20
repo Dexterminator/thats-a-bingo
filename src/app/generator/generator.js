@@ -1,8 +1,9 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	// $scope.entries = ["1", "2", "3", "4", "5", "6", "7"];
-	$scope.entries = [];
+	$scope.entries = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11",
+	"12", "13", "14", "15", "16", "17", "18", "19", "20"];
+	// $scope.entries = [];
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
 	$scope.isBoardFilled = false;
@@ -16,22 +17,23 @@ angular.module('generator', [])
 		$scope.focusInput = true;
 	}
 
+	// Check if all entries are filled whenever the entries array is changed.
 	$scope.$watch('entries', function(newVal) {
 		console.log("entries changed");
 		if ($scope.entries.length < 25) {
 			$scope.isBoardFilled = false;
 			return;
 		} else {
+			$scope.isBoardFilled = true;
+			console.log("length >= 25");
 			angular.forEach($scope.entries, function(entry, index) {
 				console.log("entry: " + entry + ", index: " + index);
 				if (entry.length === 0) {
 					console.log("length is 0");
 					$scope.isBoardFilled = false;
-					return;
 				};
 			})
 		}
-		$scope.isBoardFilled = true;
 	}, true);
 
 	$scope.shuffle = function() {
