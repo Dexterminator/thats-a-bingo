@@ -12,6 +12,10 @@ angular.module('generator', [])
 		$scope.currentIndex++;
 	}
 
+	$scope.prevSquare = function() {
+		$scope.currentIndex--;
+	}
+
 	$scope.selectSquare = function(index) {
 		$scope.currentIndex = index;
 		$scope.focusInput = true;

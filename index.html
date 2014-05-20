@@ -66,7 +66,9 @@
 <br>
 
 		<div class="col-md-6 col-md-offset-3 column">
-		<button type="submit" class="btn btn-primary">Next</button>
+
+		<button type="button" ng-click="prevSquare(); focusInput=true" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+		<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right"></span> Next</button>
 		<button type="button" class="btn btn-primary" ng-click="shuffle()" ng-disabled="!isBoardFilled">Shuffle</button>
 		</form>
 		</div>
