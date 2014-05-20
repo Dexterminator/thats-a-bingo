@@ -44,20 +44,19 @@
 		<div class="row clearfix">
 		<div class="col-md-6 col-md-offset-3 column">
 		<form class="form-horizontal" role="form" ng-submit="nextSquare(); focusInput=true">
-				<input type="text" ng-model="entries[currentIndex]" class="form-control" focus-this="focusInput">				
+		<input type="text" ng-model="entries[currentIndex]" class="form-control" focus-this="focusInput">				
 		</div>
-		</div>
-		</div>
+
 <br>
-		<div class="container">
-		<div class="row clearfix">
+<br>
+
 		<div class="col-md-6 col-md-offset-3 column">
 		<button type="submit" class="btn btn-primary">Next</button>
 		<button type="button" class="btn btn-primary" ng-click="shuffle()" ng-disabled="!isBoardFilled">Shuffle</button>
 		</form>
 		</div>
 		</div>
-		</div>
+
 
 
 	</div>
