@@ -20,6 +20,12 @@ angular.module('generator', [])
 	// Check if all entries are filled whenever the entries array is changed.
 	$scope.$watch('entries', function(newVal) {
 		console.log("entries changed");
+
+		//TODO: Find better way of limiting characters, possibly changing text size after a threshold
+		if ($scope.entries[$scope.currentIndex].length > 60) {
+			$scope.entries[$scope.currentIndex] = $scope.entries[$scope.currentIndex].substring(0, 60);
+		};
+
 		if ($scope.entries.length < 25) {
 			$scope.isBoardFilled = false;
 			return;
