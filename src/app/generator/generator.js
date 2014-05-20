@@ -1,7 +1,8 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	$scope.entries = ["1", "2", "3", "4", "5", "6", "7"];
+	// $scope.entries = ["1", "2", "3", "4", "5", "6", "7"];
+	$scope.entries = [];
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
 	$scope.isBoardFilled = false;
@@ -59,6 +60,7 @@ angular.module('generator', [])
 			scope.$watch(attrs.focusThis, function(value) {
 				if (value === true) {
 					element[0].focus();
+					element[0].select();
 					scope[attrs.focusThis] = false;
 				};
 			})
