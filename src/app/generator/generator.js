@@ -23,14 +23,11 @@ angular.module('generator', [])
 
 	// Check if all entries are filled whenever the entries array is changed.
 	$scope.$watch('entries', function(newVal) {
-		console.log("entries changed");
-
 		if ($scope.entries.length < 25) {
 			$scope.isBoardFilled = false;
 			return;
 		} else {
 			$scope.isBoardFilled = true;
-			console.log("length >= 25");
 			angular.forEach($scope.entries, function(entry, index) {
 				console.log("entry: " + entry + ", index: " + index);
 				if (entry.length === 0) {
