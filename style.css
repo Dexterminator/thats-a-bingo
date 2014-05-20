@@ -25,6 +25,10 @@ table {
     background-color: #18a9a7;
 }
 
+.square:hover{
+    background-color: #178e8f;
+    }
+
 .selected-square{
 	height: 120px;
     width: 120px;
