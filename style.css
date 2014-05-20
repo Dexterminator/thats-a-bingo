@@ -28,6 +28,7 @@ table {
 .square:hover{
     background-color: #18a9a7;
     font-weight: bold;
+    cursor: pointer;
     }
 
 .selected-square{
