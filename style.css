@@ -22,11 +22,12 @@ table {
     text-align: center;
     display: table-cell;
     word-break: break-word;
-    background-color: #18a9a7;
+    background-color: #1fcecb;
 }
 
 .square:hover{
-    background-color: #178e8f;
+    background-color: #18a9a7;
+    font-weight: bold;
     }
 
 .selected-square{
