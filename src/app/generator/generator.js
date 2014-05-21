@@ -21,6 +21,10 @@ angular.module('generator', [])
 		$scope.focusInput = true;
 	}
 
+	$scope.cleanboard = function () {
+		$scope.entries = [];
+		}
+
 	// Check if all entries are filled whenever the entries array is changed.
 	$scope.$watch('entries', function(newVal) {
 		if ($scope.entries.length < 25) {
