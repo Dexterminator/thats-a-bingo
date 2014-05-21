@@ -21,6 +21,7 @@ angular.module('generator', [])
 		$scope.focusInput = true;
 	}
 
+	// Probably not needed in final version, just added for test.
 	$scope.cleanboard = function () {
 		$scope.entries = [];
 		}
