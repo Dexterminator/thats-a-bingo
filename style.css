@@ -89,3 +89,9 @@ table {
 .small-text {
     font-size: 12px;
 }
+
+.form-control {
+
+display: inline-block;
+width: 65%;
+}

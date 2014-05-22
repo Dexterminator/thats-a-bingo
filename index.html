@@ -59,26 +59,20 @@
 		<br>
 
 		<div class="row clearfix">
+	<p>
 		<div class="col-md-6 col-md-offset-3 column">
 		<form class="form-horizontal" role="form" ng-submit="nextSquare(); focusInput=true">
-		<input type="text" maxlength="100" ng-model="entries[currentIndex]" class="form-control" focus-this="focusInput">				
-		</div>
-
-<br>
-<br>
-
-		<div class="col-md-6 col-md-offset-3 column">
-
 		<button type="button" ng-disabled="currentIndex == 0" ng-click="prevSquare(); focusInput=true" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+		<input type="text" maxlength="100" ng-model="entries[currentIndex]" class="form-control" focus-this="focusInput">				
 		<button type="submit" ng-disabled="currentIndex == 24"class="btn btn-default">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
-		<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"><span> Shuffle</button>
-
+	</p>
 		</form>
 		</div>
 <br>
 <br>
 		<div class="col-md-6 col-md-offset-3 column">
-		<button type="button" class="btn btn-default" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"><span> Clean</button>
+<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"><span> Shuffle</button>
+<button type="button" class="btn btn-default" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"><span> Clean</button>
 		</div>
 
 </div>
