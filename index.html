@@ -29,35 +29,14 @@
 <div class="container">
 	<div ng-controller="mainController" class="row">
 		<table>
-			<tr>
-				<td ng-repeat="i in [0, 1, 2, 3, 4]">
-					<div class="square" ng-class="{'selected-square': (i === currentIndex), 'small-text': (entries[i].length > 65)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
-				<td>
-			</tr>
-			<tr>
-				<td ng-repeat="i in [5, 6, 7, 8, 9]">
-					<div class="square" ng-class="{'selected-square': (i === currentIndex), 'small-text': (entries[i].length > 65)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
-				<td>
-			</tr>
-			<tr>
-				<td ng-repeat="i in [10, 11, 12, 13, 14]">
-					<div class="square" ng-class="{'selected-square': (i === currentIndex), 'small-text': (entries[i].length > 65)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
-				<td>
-			</tr>
-			<tr>
-				<td ng-repeat="i in [15, 16, 17, 18, 19]">
-					<div class="square" ng-class="{'selected-square': (i === currentIndex), 'small-text': (entries[i].length > 65)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
-				<td>
-			</tr>
-			<tr>
-				<td ng-repeat="i in [20, 21, 22, 23, 24]">
-					<div class="square" ng-class="{'selected-square': (i === currentIndex), 'small-text': (entries[i].length > 65)}" ng-click="selectSquare(i)">{{entries[i]}}</div>
+			<tr ng-repeat="i in [0, 5, 10, 15, 20]">
+				<td ng-repeat="j in [0, 1, 2, 3, 4]">
+					<div class="square" ng-class="{'selected-square': (j+i === currentIndex), 'small-text': (entries[j+i].length > 65)}" ng-click="selectSquare(j+i)">{{entries[j+i]}}</div>
 				<td>
 			</tr>
 		</table>
 
 		<br>
-
 		<div class="row clearfix">
 	<p>
 		<div class="col-md-6 col-md-offset-3 column">
