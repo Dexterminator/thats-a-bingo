@@ -1,16 +1,10 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	$scope.squares = [
-		{text: '1', freeSquare: false},  {text: '2', freeSquare: false},  {text: '3', freeSquare: false},
-		{text: '4', freeSquare: false},  {text: '5', freeSquare: false},  {text: '6', freeSquare: false},
-		{text: '7', freeSquare: false},  {text: '8', freeSquare: false},  {text: '9', freeSquare: false},
-		{text: '10', freeSquare: false}, {text: '11', freeSquare: false}, {text: '12', freeSquare: false},
-		{text: '13', freeSquare: false}, {text: '14', freeSquare: false}, {text: '15', freeSquare: false},
-		{text: '16', freeSquare: false}, {text: '17', freeSquare: false}, {text: '18', freeSquare: false},
-		{text: '19', freeSquare: false}, {text: '20', freeSquare: false}, {text: '21', freeSquare: false},
-		{text: '22', freeSquare: false}, {text: '23', freeSquare: false}, {text: '24', freeSquare: false},
-		{text: '25', freeSquare: false}];
+	$scope.squares = [];
+	for(var i=0; i < 25; i++){
+		$scope.squares[i] = {text:'', freeSquare: false}
+	}
 
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
@@ -32,6 +26,9 @@ angular.module('generator', [])
 	// Probably not needed in final version, just added for test.
 	$scope.cleanboard = function () {
 		$scope.squares = [];
+		for(var i=0; i < 25; i++){
+			$scope.squares[i] = {text:'', freeSquare: false}
+		}
 	};
 
 	// Check if all entries are filled whenever the entries array is changed.
