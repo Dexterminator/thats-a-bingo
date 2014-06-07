@@ -31,7 +31,7 @@
 		<table>
 			<tr ng-repeat="i in [0, 5, 10, 15, 20]">
 				<td ng-repeat="j in [0, 1, 2, 3, 4]">
-					<div class="square" ng-class="{'selected-square': (j+i === currentIndex), 'small-text': (squares[j+i].length > 65)}" ng-click="selectSquare(j+i)">
+					<div class="square" ng-class="{'selected-square': (j+i === currentIndex), 'small-text': (squares[j+i].text.length > 65)}" ng-click="selectSquare(j+i)">
 						<p ng-if="!squares[j+i].freeSquare">{{squares[j+i].text}}</p>
 						<span ng-if="squares[j+i].freeSquare" class="freeSquare glyphicon glyphicon-heart"></span>
 					</div>
