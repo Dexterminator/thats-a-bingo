@@ -1,65 +1,77 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	// $scope.entries = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11",
-	// "12", "13", "14", "15", "16", "17", "18", "19", "20"];
-	$scope.entries = [];
+	$scope.squares = [];
+	for(var i=0; i < 25; i++){
+		$scope.squares[i] = {text:'', freeSquare: false}
+	}
+
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
 	$scope.isBoardFilled = false;
 
 	$scope.nextSquare = function() {
 		$scope.currentIndex++;
-	}
+	};
 
 	$scope.prevSquare = function() {
 		$scope.currentIndex--;
-	}
+	};
 
 	$scope.selectSquare = function(index) {
 		$scope.currentIndex = index;
 		$scope.focusInput = true;
-	}
+	};
 
 	// Probably not needed in final version, just added for test.
 	$scope.cleanboard = function () {
-		$scope.entries = [];
+		$scope.squares = [];
+		for(var i=0; i < 25; i++){
+			$scope.squares[i] = {text:'', freeSquare: false}
 		}
+	};
 
 	// Check if all entries are filled whenever the entries array is changed.
-	$scope.$watch('entries', function(newVal) {
-		if ($scope.entries.length < 25) {
+	$scope.$watch('squares', function(newVal) {
+		if ($scope.squares.length < 25) {
 			$scope.isBoardFilled = false;
 			return;
 		} else {
 			$scope.isBoardFilled = true;
-			angular.forEach($scope.entries, function(entry, index) {
-				console.log("entry: " + entry + ", index: " + index);
-				if (entry.length === 0) {
+			angular.forEach($scope.squares, function(square, index) {
+				console.log("entry: " + square.text + ", index: " + index);
+				if (square.length === 0) {
 					console.log("length is 0");
 					$scope.isBoardFilled = false;
-				};
+				}
 			})
 		}
 	}, true);
 
 	$scope.shuffle = function() {
-		var counter = $scope.entries.length, temp, index;
+		var counter = $scope.squares.length, temp, index;
 
-	    // While there are elements in the array
-	    while (counter > 0) {
-	        // Pick a random index
-	        index = Math.floor(Math.random() * counter);
+		// While there are elements in the array
+		while (counter > 0) {
+			// Pick a random index
+			index = Math.floor(Math.random() * counter);
 
-	        // Decrease counter by 1
-	        counter--;
+			// Decrease counter by 1
+			counter--;
 
-	        // And swap the last element with it
-	        temp = $scope.entries[counter];
-	        $scope.entries[counter] = $scope.entries[index];
-	        $scope.entries[index] = temp;
-	    }
-	}
+			// And swap the last element with it
+			temp = $scope.squares[counter].text;
+			$scope.squares[counter].text = $scope.squares[index].text;
+			$scope.squares[index].text = temp;
+		}
+	};
+
+	$scope.makeFreeSpace = function(freeIndex) {
+		if (freeIndex === undefined){
+			freeIndex = Math.ceil(($scope.squares.length - 1)/2);
+		}
+		$scope.squares[freeIndex].freeSquare = !$scope.squares[freeIndex].freeSquare;
+	};
 })
 
 .directive('focusThis', function() {
@@ -71,7 +83,7 @@ angular.module('generator', [])
 					element[0].focus();
 					element[0].select();
 					scope[attrs.focusThis] = false;
-				};
+				}
 			})
 		}
 	}
