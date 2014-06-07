@@ -11,9 +11,6 @@ A bingo generator web app.
 * Next Button to the RIGHT
 * Bigger "Shuffle" Button
 
-## Free Space
-* Free Space in the middle
-
 ## Image Support
 * Image support for spaces
 
