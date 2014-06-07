@@ -25,6 +25,15 @@ table {
     background-color: #1fcecb;
 }
 
+.freeSquare{
+    font-size: 500%;
+    color: #E74C3C;
+
+}
+.selected-square .freeSquare {
+    color: #ECF0F1;
+}
+
 .square:hover{
     background-color: #18a9a7;
     cursor: pointer;

@@ -31,7 +31,10 @@
 		<table>
 			<tr ng-repeat="i in [0, 5, 10, 15, 20]">
 				<td ng-repeat="j in [0, 1, 2, 3, 4]">
-					<div class="square" ng-class="{'selected-square': (j+i === currentIndex), 'small-text': (entries[j+i].length > 65)}" ng-click="selectSquare(j+i)">{{entries[j+i]}}</div>
+					<div class="square" ng-class="{'selected-square': (j+i === currentIndex), 'small-text': (squares[j+i].length > 65)}" ng-click="selectSquare(j+i)">
+						<p ng-if="!squares[j+i].freeSquare">{{squares[j+i].text}}</p>
+						<span ng-if="squares[j+i].freeSquare" class="freeSquare glyphicon glyphicon-heart"></span>
+					</div>
 				<td>
 			</tr>
 		</table>
@@ -42,17 +45,18 @@
 		<div class="col-md-6 col-md-offset-3 column">
 		<form class="form-horizontal" role="form" ng-submit="nextSquare(); focusInput=true">
 		<button type="button" ng-disabled="currentIndex == 0" ng-click="prevSquare(); focusInput=true" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
-		<input type="text" maxlength="100" ng-model="entries[currentIndex]" class="form-control" focus-this="focusInput">				
+		<input type="text" maxlength="100" ng-model="squares[currentIndex].text" class="form-control" focus-this="focusInput">
 		<button type="submit" ng-disabled="currentIndex == 24"class="btn btn-default">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
 	</p>
 		</form>
 		</div>
 <br>
 <br>
-		<div class="col-md-6 col-md-offset-3 column">
-<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"><span> Shuffle</button>
-<button type="button" class="btn btn-default" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"><span> Clean</button>
-		</div>
+	<div class="col-md-6 col-md-offset-3 column">
+		<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"></span> Shuffle</button>
+		<button type="button" class="btn btn-default" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"></span> Clean</button>
+		<button type="button" class="btn btn-default" ng-click="makeFreeSpace(currentIndex)"><span class="glyphicon glyphicon-heart"></span> Free Square</button>
+	</div>
 
 </div>
 </div>
