@@ -1,9 +1,9 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	$scope.entries = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11",
-	"12", "13", "14", "15", "16", "17", "18", "19", "20"];
-	// $scope.entries = [];
+	// $scope.entries = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11",
+	// "12", "13", "14", "15", "16", "17", "18", "19", "20"];
+	$scope.entries = [];
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
 	$scope.isBoardFilled = false;
