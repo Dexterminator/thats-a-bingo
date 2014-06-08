@@ -61,9 +61,9 @@
 				</p>
 				<div class="col-md-6 col-md-offset-3 column">
 					<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"></span> Shuffle</button>
-					<button type="button" class="btn btn-default" ng-if="!editMode" ng-click="setEditMode(true)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Edit Board</button>
-					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="setEditMode(false)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Save Board</button>
-					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"></span> Clean</button>
+					<button type="button" class="btn btn-default" ng-if="!editMode" ng-click="setEditMode(true)" ><span class="glyphicon glyphicon-edit"></span> Edit Board</button>
+					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="setEditMode(false)" ><span class="glyphicon glyphicon-edit"></span> Save Board</button>
+                    <button type="button" class="btn btn-default" ng-click="setLoadMode(true)" ><span class="fa fa-upload"></span> Upload Board</button>
 					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="makeFreeSpace(currentIndex)"><span class="glyphicon glyphicon-heart"></span> Free Square</button>
                     <button type="button" class="btn btn-default" ng-if="editMode" ng-click="shareBoard()"><i class="fa fa-share-alt"></i></span> Share</button>
 				</div>
@@ -72,6 +72,13 @@
                     <h5>Raw/Copy-paste</h5>
                     <textarea class="form-control" rows="5">{{squares}}</textarea>
                 </div>
+                <form role="form" ng-submit="loadData(loadedData)" ng-if="loadMode" class="col-md-9 col-md-offset-3 column share">
+                    <div class="form-group">
+                        <label for="loadForm">Please paste code to load below</label><br/>
+                        <textarea id='loadForm' class="form-control" rows="5" ng-Model="loadedData"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
 	    </div>
 
 	</div>

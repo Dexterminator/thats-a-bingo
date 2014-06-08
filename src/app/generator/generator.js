@@ -12,6 +12,9 @@ angular.module('generator', [])
 	$scope.editMode = false;
     $scope.shareMode = false;
 
+    $scope.loadMode = false;
+    $scope.loadedData = '';
+
 	$scope.nextSquare = function() {
 		$scope.currentIndex++;
 	};
@@ -133,9 +136,26 @@ angular.module('generator', [])
 		$scope.currentIndex = 0;
 	};
 
+    $scope.setLoadMode = function(setting) {
+        $scope.loadMode = setting;
+    };
+
+    $scope.loadData = function(data) {
+        console.log('s',data);
+        try{
+            json = angular.fromJson(data);
+            console.log('l',json);
+            $scope.squares = json;
+        }
+        catch (err){
+            alert('Error, could not load data:',err); //Fix this in UI plz
+            return;
+        }
+        $scope.loadMode = false;
+    };
+
     $scope.shareBoard = function(){
         $scope.shareMode = true;
-
     }
 })
 
