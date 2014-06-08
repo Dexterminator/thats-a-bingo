@@ -40,6 +40,7 @@ table {
 .gottenText{
     background-image: url("circle.png");
 }
+
 .selected-square .gottenText:before{
     position: absolute;
     font-family: "FontAwesome";

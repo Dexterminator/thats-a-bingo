@@ -10,7 +10,9 @@
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
+<link type="text/css" media="screen" rel="stylesheet" href="style.css">
+<link type="text/css" media="print" rel="stylesheet" href="print.css">
+
 <script src="http://use.edgefonts.net/passion-one.js"></script>
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- Frameworks -->
@@ -41,18 +43,22 @@
 		</table>
 
 		<br>
-		<div class="row clearfix">
-				<p>
-					<div ng-hide="!editMode" class="col-md-6 col-md-offset-3 column">
-						<form class="form-horizontal" role="form" ng-submit="nextSquare()">
-						<button type="button" ng-disabled="currentIndex == 0" ng-click="prevSquare(); focusInput=true" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
-						<input type="text" maxlength="100" ng-model="squares[currentIndex].text" class="form-control" x-focus-this="focusInput">
-						<button type="submit" ng-disabled="currentIndex == 24"class="btn btn-default">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
-						</form>
-						<br>
-					</div>
+		<div class="bingo-noprint">
+            <div class="row clearfix">
+                    <p>
+                        <div ng-hide="!editMode" class="col-md-6 col-md-offset-3 column">
+                            <form class="form-horizontal" role="form" ng-submit="nextSquare()">
+                            <button type="button" ng-disabled="currentIndex == 0" ng-click="prevSquare(); focusInput=true" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+                            <input type="text" maxlength="100" ng-model="squares[currentIndex].text" class="form-control" x-focus-this="focusInput">
+                            <button type="submit" ng-disabled="currentIndex == 24"class="btn btn-default">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+                            </form>
+                            <br>
+                        </div>
+                    </p>
+            </div>
+        </div>
+		<div class="bingo-noprint">
 				</p>
-
 				<div class="col-md-6 col-md-offset-3 column">
 					<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"></span> Shuffle</button>
 					<button type="button" class="btn btn-default" ng-if="!editMode" ng-click="setEditMode(true)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Edit Board</button>
@@ -62,13 +68,14 @@
                     <button type="button" class="btn btn-default" ng-if="editMode" ng-click="shareBoard()"><i class="fa fa-share-alt"></i></span> Share</button>
 				</div>
                 <div ng-if="shareMode" class="col-md-9 col-md-offset-3 column share">
-                    <h3>Share This Board</h2>
+                    <h3>Share This Board</h3>
                     <h5>Raw/Copy-paste</h5>
                     <textarea class="form-control" rows="5">{{squares}}</textarea>
                 </div>
+	    </div>
 
-		</div>
 	</div>
+</div>
 
 </body>
 </html>
