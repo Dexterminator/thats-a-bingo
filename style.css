@@ -35,6 +35,7 @@ table {
     margin-left: -7px;
 }
 .gottenText{
+<<<<<<< HEAD
     position:relative;
 }
 .gottenText:before{
@@ -47,6 +48,10 @@ table {
      font-size: 800%;
      content: "\f111";
  }
+=======
+    background-image: url("circle.png");
+}
+>>>>>>> master
 .selected-square .gottenText:before{
     position: absolute;
     font-family: "FontAwesome";
