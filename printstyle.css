@@ -13,16 +13,24 @@ table {
     margin-right: auto ;
     }
 
+.container {
+    width:900px;
+    }
+
 .square{
-	height: 120px;
-    width: 120px;
+	height: 150px;
+    width: 150px;
     border-radius: 0px;
     border: 1px solid #ECF0F1;
     vertical-align: middle;
     text-align: center;
     display: table-cell;
     word-break: break-word;
-    background-color: #1fcecb;
+    background-color: #FFF;
+}
+
+.bingo-print {
+    visibility: hidden;
 }
 
 .freeSquare{
@@ -34,57 +42,32 @@ table {
     color: #ECF0F1;
 }
 
-.square:hover{
-    background-color: #18a9a7;
-    cursor: pointer;
-    }
 
-.selected-square{
-	height: 120px;
-    width: 120px;
-    border-radius: 0px;
-    border: 1px solid #ECF0F1;
-    vertical-align: middle;
-    text-align: center;
-    display: table-cell;
-    background-color: #E74C3C;
-}
-
-.selected-square:hover{
-    height: 120px;
-    width: 120px;
-    border-radius: 0px;
-    border: 1px solid #ECF0F1;
-    vertical-align: middle;
-    text-align: center;
-    display: table-cell;
-    background-color: #E74C3C;
-}
 
 .bingo-header {
     font-size: 24px;
     text-align: center;
-    background-color: #1fcecb;
+    background-color: #FFF;
     padding-top:20px; 
-    padding-bottom:40px;
+    padding-bottom:10px;
     padding-left:15px;
     padding-right:15px;
     position: relative;
     margin-bottom: 40px;
     line-height: 0.6;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "passion-one", sans-serif;
 
 }
 
 .bingo-header h1{
-    color: #eceabe;
+    color: #000;
     text-transform: uppercase;
     font-size: 4.5em;
     line-height: 0.6;
     }
 
     .bingo-header h2{
-    color: #E9E9E9;
+    color: #000;
     text-transform: uppercase;
     font-size: 1em;
     line-height: 0.6;
