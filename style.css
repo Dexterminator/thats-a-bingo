@@ -35,18 +35,8 @@ table {
     margin-left: -7px;
 }
 .gottenText{
-    position:relative;
+    background-image: url("circle.png");
 }
-.gottenText:before{
-     position: absolute;
-     font-family: "FontAwesome";
-     top: -30px;
-     left: 5px;
-     color: #E74C3C;
-
-     font-size: 800%;
-     content: "\f111";
- }
 .selected-square .gottenText:before{
     position: absolute;
     font-family: "FontAwesome";
