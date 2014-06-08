@@ -59,7 +59,13 @@
 					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="setEditMode(false)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Save Board</button>
 					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"></span> Clean</button>
 					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="makeFreeSpace(currentIndex)"><span class="glyphicon glyphicon-heart"></span> Free Square</button>
+                    <button type="button" class="btn btn-default" ng-if="editMode" ng-click="shareBoard()"><i class="fa fa-share-alt"></i></span> Share</button>
 				</div>
+                <div ng-if="shareMode" class="col-md-9 col-md-offset-3 column share">
+                    <h3>Share This Board</h2>
+                    <h5>Raw/Copy-paste</h5>
+                    <textarea class="form-control" rows="5">{{squares}}</textarea>
+                </div>
 
 		</div>
 	</div>

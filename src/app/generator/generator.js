@@ -10,6 +10,7 @@ angular.module('generator', [])
 	$scope.focusInput = true;
 	$scope.isBoardFilled = false;
 	$scope.editMode = false;
+    $scope.shareMode = false;
 
 	$scope.nextSquare = function() {
 		$scope.currentIndex++;
@@ -130,7 +131,12 @@ angular.module('generator', [])
 		$scope.editMode = setting;
 		$scope.cleanGotten();
 		$scope.currentIndex = 0;
-	}
+	};
+
+    $scope.shareBoard = function(){
+        $scope.shareMode = true;
+
+    }
 })
 
 .directive('focusThis', function() {

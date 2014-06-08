@@ -29,6 +29,9 @@ table {
     user-select: none;
 }
 
+.share{
+    color: #333333;
+}
 .freeSquare{
     font-size: 500%;
     color: #E74C3C;
