@@ -5,7 +5,7 @@ body {
     }
 
 h1 {
-    color: #000; 
+    color: #000;
     }
 
 table {
@@ -29,7 +29,7 @@ table {
     background-color: #FFF;
 }
 
-.bingo-print {
+.bingo-noprint {
     visibility: hidden;
 }
 
@@ -48,7 +48,7 @@ table {
     font-size: 24px;
     text-align: center;
     background-color: #FFF;
-    padding-top:20px; 
+    padding-top:20px;
     padding-bottom:10px;
     padding-left:15px;
     padding-right:15px;
@@ -66,23 +66,23 @@ table {
     line-height: 0.6;
     }
 
-    .bingo-header h2{
+.bingo-header h2{
     color: #000;
     text-transform: uppercase;
     font-size: 1em;
     line-height: 0.6;
     }
 
-.bingo-row { 
+.bingo-row {
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+}
 
 .small-text {
     font-size: 12px;
 }
 
 .form-control {
-
 display: inline-block;
 width: 65%;
 }
