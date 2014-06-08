@@ -10,7 +10,9 @@
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
+<link type="text/css" media="screen" rel="stylesheet" href="style.css">
+<link type="text/css" media="print" rel="stylesheet" href="print.css">
+
 <script src="http://use.edgefonts.net/passion-one.js"></script>
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- Frameworks -->
@@ -52,15 +54,11 @@
 						</form>
 						<br>
 					</div>
-<<<<<<< HEAD
 					</div>
 				</p>
 
 		<div class="bingo-print">
-=======
 				</p>
-
->>>>>>> master
 				<div class="col-md-6 col-md-offset-3 column">
 					<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"></span> Shuffle</button>
 					<button type="button" class="btn btn-default" ng-if="!editMode" ng-click="setEditMode(true)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Edit Board</button>
@@ -68,17 +66,14 @@
 					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"></span> Clean</button>
 					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="makeFreeSpace(currentIndex)"><span class="glyphicon glyphicon-heart"></span> Free Square</button>
 				</div>
-<<<<<<< HEAD
 				</div>
 
 		</div>
 	</div>
 </div>
-=======
 
 		</div>
 	</div>
->>>>>>> master
 
 </body>
 </html>
