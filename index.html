@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- Frameworks -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -31,8 +32,8 @@
 		<table>
 			<tr ng-repeat="i in [0, 5, 10, 15, 20]">
 				<td ng-repeat="j in [0, 1, 2, 3, 4]">
-					<div class="square" ng-class="{'selected-square': (j+i === currentIndex), 'small-text': (squares[j+i].text.length > 65)}" ng-click="selectSquare(j+i)">
-						<p ng-if="!squares[j+i].freeSquare">{{squares[j+i].text}}</p>
+					<div class="square" ng-class="{'selected-square': (j+i === currentIndex) && editMode, 'small-text': (squares[j+i].text.length > 65), gottenText: squares[j+i].gotten}" ng-click="selectSquare(j+i)">
+						<p ng-if="!squares[j+i].freeSquare" class="squareText">{{squares[j+i].text}}</p>
 						<span ng-if="squares[j+i].freeSquare" class="freeSquare glyphicon glyphicon-heart"></span>
 					</div>
 				<td>
@@ -41,25 +42,27 @@
 
 		<br>
 		<div class="row clearfix">
-	<p>
-		<div class="col-md-6 col-md-offset-3 column">
-		<form class="form-horizontal" role="form" ng-submit="nextSquare(); focusInput=true">
-		<button type="button" ng-disabled="currentIndex == 0" ng-click="prevSquare(); focusInput=true" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
-		<input type="text" maxlength="100" ng-model="squares[currentIndex].text" class="form-control" focus-this="focusInput">
-		<button type="submit" ng-disabled="currentIndex == 24"class="btn btn-default">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
-	</p>
-		</form>
-		</div>
-<br>
-<br>
-	<div class="col-md-6 col-md-offset-3 column">
-		<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"></span> Shuffle</button>
-		<button type="button" class="btn btn-default" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"></span> Clean</button>
-		<button type="button" class="btn btn-default" ng-click="makeFreeSpace(currentIndex)"><span class="glyphicon glyphicon-heart"></span> Free Square</button>
-	</div>
+				<p>
+					<div ng-hide="!editMode" class="col-md-6 col-md-offset-3 column">
+						<form class="form-horizontal" role="form" ng-submit="nextSquare()">
+						<button type="button" ng-disabled="currentIndex == 0" ng-click="prevSquare(); focusInput=true" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+						<input type="text" maxlength="100" ng-model="squares[currentIndex].text" class="form-control" x-focus-this="focusInput">
+						<button type="submit" ng-disabled="currentIndex == 24"class="btn btn-default">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+						</form>
+						<br>
+					</div>
+				</p>
 
-</div>
-</div>
+				<div class="col-md-6 col-md-offset-3 column">
+					<button type="button" class="btn btn-default" ng-click="shuffle()" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-random"></span> Shuffle</button>
+					<button type="button" class="btn btn-default" ng-if="!editMode" ng-click="setEditMode(true)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Edit Board</button>
+					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="setEditMode(false)" ng-disabled="!isBoardFilled"><span class="glyphicon glyphicon-edit"></span> Save Board</button>
+					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="cleanboard()"><span class="glyphicon glyphicon-th"></span> Clean</button>
+					<button type="button" class="btn btn-default" ng-if="editMode" ng-click="makeFreeSpace(currentIndex)"><span class="glyphicon glyphicon-heart"></span> Free Square</button>
+				</div>
+
+		</div>
+	</div>
 
 </body>
 </html>
