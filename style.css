@@ -36,7 +36,6 @@ table {
 }
 .gottenText{
     position:relative;
-    display:inline-table;
 }
 .gottenText:before{
      position: absolute;
