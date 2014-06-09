@@ -21,7 +21,7 @@ table {
     vertical-align: middle;
     text-align: center;
     display: table-cell;
-    word-break: break-all;
+    word-break: keep-all;
     background-color: #1fcecb;
     -webkit-user-select: none;
     -moz-user-select: none;

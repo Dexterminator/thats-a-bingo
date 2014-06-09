@@ -1,10 +1,11 @@
 angular.module('generator', [])
 
 .controller('mainController', function($scope){
-	$scope.squares = [];
-	for(var i=0; i < 25; i++){
-		$scope.squares[i] = {text: '', freeSquare: false, gotten: false}
-	}
+	$scope.squares = [{text: "Wait for applause that doesn't come",freeSquare: false, gotten: false},{text: "Ubisoft's celebrity host calls gamers nerds",freeSquare: false, gotten: false},{text: "\"We've heard fans loud and clear\"",freeSquare: false, gotten: false},{text: "VR stage demo boring",freeSquare: false, gotten: false},{text: "Netflix logo appears",freeSquare: false, gotten: false},{text: "Awkward innuendo falls flat",freeSquare: false, gotten: false},{text: "Microsoft acts like kinect is still important",freeSquare: false, gotten: false},{text: "\"Revolutionary\" Sequel changes very little",freeSquare: false, gotten: false},{text: "New-gen GTA V Port",freeSquare: false, gotten: false},{text: "Company Loves (That is, Acknowledges) Indies",freeSquare: false, gotten: false},{text: "Whole Family Enjoys Something",freeSquare: false, gotten: false},{text: "The last guardian goes to ps4",freeSquare: false, gotten: false},{text: "Rare is working on...anything",freeSquare: false, gotten: false},{text: "David cage speech is too long",freeSquare: false, gotten: false},{text: "Platform-exclusive call of duty DLC",freeSquare: false, gotten: false},{text: "EA brings disinterested athlete on stage",freeSquare: false, gotten: false},{text: "More cross-gen than next-gen",freeSquare: false, gotten: false},{text: "Metal gear trailer confuses audience",freeSquare: false, gotten: false},{text: "Poorly timed \"Wooo!\"",freeSquare: false, gotten: false},{text: "Xbox One doing great, graph says",freeSquare: false, gotten: false},{text: "Montage includes 3+ shooters",freeSquare: false, gotten: false},{text: "Motion controlled demo fail show motion controls still suck",freeSquare: false, gotten: false},{text: "Kids game demoed akwardly by adults",freeSquare: false, gotten: false},{text: "Classic game remake set up unprecedented hype",freeSquare: false, gotten: false},{text: "3+ already announced games are reannounced for 2015 as if new",freeSquare: false, gotten: false}];
+	$scope.squares[12].freeSquare = true;
+	//for(var i=0; i < 25; i++){
+	//	$scope.squares[i] = {text: '', freeSquare: false, gotten: false}
+	//}
 
 	$scope.currentIndex = 0;
 	$scope.focusInput = true;
