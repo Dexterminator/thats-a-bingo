@@ -1,12 +1,13 @@
 body {
-    background-color: #cd4c41;
+    background-color: #f4f5f5;
     color: #FFF;
     font-size: 16px;
     }
 
 h1 {
-    color: #000; 
+    color: #FFF; 
     }
+
 
 table {
     margin-left: auto ;
@@ -17,7 +18,7 @@ table {
 	height: 150px;
     width: 150px;
     border-radius: 0px;
-    border: 1px solid #cd4c41;
+    border: 1px solid #f4f5f5;
     padding: 5px;
     vertical-align: middle;
     text-align: center;
@@ -25,7 +26,7 @@ table {
     font-size: 17px;
     display: table-cell;
     word-break: keep-all;
-    background-color: #e79964;
+    background-color: #d1493a;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -34,7 +35,7 @@ table {
 
 .freeSquare{
     font-size: 500%;
-    color: #E74C3C;
+    color: #FFF;
     margin-left: -7px;
 }
 .gottenText{
@@ -88,7 +89,7 @@ table {
 .bingo-header {
     font-size: 24px;
     text-align: center;
-    background-color: #da6345;
+    background-color: #1f0e08;
     padding-top:20px; 
     padding-bottom:40px;
     padding-left:15px;
@@ -101,18 +102,19 @@ table {
 }
 
 .bingo-header h1{
-    color: #eceabe;
+    color: #d75443;
     text-transform: uppercase;
     font-size: 4.5em;
     line-height: 0.6;
     }
 
     .bingo-header h2{
-    color: #E9E9E9;
+    color: #f4f5f5;
     text-transform: uppercase;
     font-size: 1em;
     line-height: 0.6;
     }
+
 
 .bingo-row { 
     margin-left: auto;
